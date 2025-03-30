@@ -9,7 +9,7 @@ root.geometry("400x400")
 # Choices
 choices = ["Rock", "Paper", "Scissors"]
 
-# Function to play the game
+
 def play(choice):
     computer_choice = random.choice(choices)
     result = determine_winner(choice, computer_choice)
@@ -20,6 +20,7 @@ def play(choice):
 
 # Function to determine winner
 def determine_winner(player, computer):
+    
     if player == computer:
         return "It's a Draw!"
     elif (player == "Rock" and computer == "Scissors") or \
@@ -52,6 +53,7 @@ for choice in choices:
 
 # Reset Button
 reset_btn = tk.Button(root, text="Reset", font=("Arial", 12), width=10, command=reset)
+
 reset_btn.pack(pady=10)
 
 # Run the GUI
